@@ -10,7 +10,7 @@ jobs:
 	steps:
 	  - uses: actions/checkout@v3
 	  - name: Use_secrets
-	    run: echo ${{ secrets.HITACHI_TOKEN }}
+	    run: echo ${{secrets.HITACHI_TOKEN}}
 		
 	  - name: copy to new repo
 	    run:
