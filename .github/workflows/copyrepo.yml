@@ -6,13 +6,13 @@ on:
 jobs:
   repo_copy:
     runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v3
-        - name: Use_secrets
-          run: echo ${{secrets.HITACHI_TOKEN}}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use_secrets
+        run: echo ${{secrets.HITACHI_TOKEN}}
 
-        - name: copy to new repo
-          run:
-            #- add a repote repo
-            git remote add origin https://${{secrets.HITACHI_TOKEN}}github.com/Adityaanuj/hitachi-demo3.git
-            git push upstream main
+      - name: copy to new repo
+        run:
+          #- add a repote repo
+          git remote add origin https://${{secrets.HITACHI_TOKEN}}github.com/Adityaanuj/hitachi-demo3.git
+          git push upstream main
